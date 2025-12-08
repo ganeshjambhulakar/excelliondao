@@ -1,0 +1,638 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Web3 Theme Colors - Dark Mode (Default) */
+  --background: #020617;
+  --foreground: #F8FAFC;
+  
+  /* Primary Gradient */
+  --primary-start: #8B5CF6;
+  --primary-mid: #6366F1;
+  --primary-end: #3B82F6;
+  
+  /* Glow Colors */
+  --glow-purple: rgba(139, 92, 246, 0.5);
+  --glow-blue: rgba(59, 130, 246, 0.5);
+  --glow-cyan: rgba(6, 182, 212, 0.5);
+  
+  /* Glass Effect */
+  --glass-bg: rgba(15, 23, 42, 0.7);
+  --glass-border: rgba(148, 163, 184, 0.1);
+  
+  /* Font Variables */
+  --font-inter: 'Inter', system-ui, sans-serif;
+  --font-jetbrains: 'JetBrains Mono', monospace;
+}
+
+/* Light Theme */
+html.light {
+  --background: #FFFFFF;
+  --foreground: #1E293B;
+  --glass-bg: rgba(255, 255, 255, 0.9);
+  --glass-border: rgba(0, 0, 0, 0.08);
+}
+
+html.light body {
+  background: #FFFFFF;
+  color: #1E293B;
+}
+
+/* Light mode backgrounds */
+html.light .bg-dark-900,
+html.light .bg-dark-950,
+html.light .bg-dark-800 {
+  background-color: #F8FAFC !important;
+}
+
+html.light section.bg-dark-900,
+html.light section.bg-dark-950 {
+  background-color: #FFFFFF !important;
+}
+
+html.light section.bg-dark-900:nth-child(even) {
+  background-color: #F8FAFC !important;
+}
+
+/* Light mode text colors */
+html.light .text-white {
+  color: #1E293B !important;
+}
+
+html.light .text-dark-300,
+html.light .text-dark-400,
+html.light .text-dark-500 {
+  color: #64748B !important;
+}
+
+/* Glass cards in light mode */
+html.light .glass-card {
+  background: #FFFFFF !important;
+  border-color: rgba(148, 163, 184, 0.3) !important;
+  box-shadow: 0 4px 24px -4px rgba(0, 0, 0, 0.08) !important;
+}
+
+html.light .glass-card-hover:hover {
+  border-color: rgba(139, 92, 246, 0.5) !important;
+  box-shadow: 0 8px 32px -4px rgba(139, 92, 246, 0.15) !important;
+}
+
+/* Animated background in light mode */
+html.light .animated-bg {
+  background: linear-gradient(-45deg, #FFFFFF, #F1F5F9, #EDE9FE, #DBEAFE) !important;
+  background-size: 400% 400% !important;
+}
+
+/* Network background in light mode */
+html.light .network-bg::before {
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(139, 92, 246, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+    linear-gradient(90deg, transparent 49.5%, rgba(148, 163, 184, 0.1) 49.5%, rgba(148, 163, 184, 0.1) 50.5%, transparent 50.5%),
+    linear-gradient(0deg, transparent 49.5%, rgba(148, 163, 184, 0.1) 49.5%, rgba(148, 163, 184, 0.1) 50.5%, transparent 50.5%);
+}
+
+/* Buttons in light mode */
+html.light .btn-secondary {
+  border-color: rgba(148, 163, 184, 0.5) !important;
+  color: #1E293B !important;
+}
+
+html.light .btn-secondary:hover {
+  background: rgba(139, 92, 246, 0.1) !important;
+  border-color: #8B5CF6 !important;
+}
+
+/* Code blocks in light mode */
+html.light pre,
+html.light .bg-dark-800 pre {
+  background: #1E293B !important;
+}
+
+html.light code {
+  background: rgba(139, 92, 246, 0.1);
+}
+
+/* Scrollbar in light mode */
+html.light ::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+
+/* Selection in light mode */
+html.light ::selection {
+  background: rgba(139, 92, 246, 0.2);
+  color: #1E293B;
+}
+
+/* Navbar classes */
+.nav-brand-text {
+  color: #F8FAFC;
+}
+
+.nav-link {
+  color: #94A3B8;
+}
+
+.nav-link:hover,
+.nav-link-active {
+  color: #F8FAFC;
+}
+
+.nav-menu-btn {
+  color: #F8FAFC;
+}
+
+.mobile-nav-bg {
+  background: rgba(15, 23, 42, 0.95);
+}
+
+.mobile-nav-link {
+  color: #CBD5E1;
+}
+
+.mobile-nav-link:hover {
+  background: rgba(30, 41, 59, 1);
+  color: #F8FAFC;
+}
+
+/* Navbar in light mode */
+html.light .navbar-glass {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border-color: rgba(148, 163, 184, 0.2) !important;
+}
+
+html.light .nav-brand-text {
+  color: #1E293B !important;
+}
+
+html.light .nav-link {
+  color: #64748B !important;
+}
+
+html.light .nav-link:hover,
+html.light .nav-link-active {
+  color: #7C3AED !important;
+}
+
+html.light .nav-menu-btn {
+  color: #1E293B !important;
+}
+
+html.light .mobile-nav-bg {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(148, 163, 184, 0.2) !important;
+}
+
+html.light .mobile-nav-link {
+  color: #475569 !important;
+}
+
+html.light .mobile-nav-link:hover {
+  background: rgba(248, 250, 252, 1) !important;
+  color: #7C3AED !important;
+}
+
+/* Footer in light mode */
+html.light footer {
+  background: #F8FAFC !important;
+  border-color: rgba(148, 163, 184, 0.2) !important;
+}
+
+html.light footer a {
+  color: #64748B !important;
+}
+
+html.light footer a:hover {
+  color: #8B5CF6 !important;
+}
+
+/* Form inputs in light mode */
+html.light input,
+html.light textarea,
+html.light select {
+  background: #FFFFFF !important;
+  border-color: rgba(148, 163, 184, 0.4) !important;
+  color: #1E293B !important;
+}
+
+html.light input::placeholder,
+html.light textarea::placeholder {
+  color: #94A3B8 !important;
+}
+
+html.light input:focus,
+html.light textarea:focus,
+html.light select:focus {
+  border-color: #8B5CF6 !important;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1) !important;
+}
+
+/* Pricing cards in light mode */
+html.light [class*="pricing"] .glass-card {
+  background: #FFFFFF !important;
+}
+
+/* Service cards in light mode */
+html.light .service-card {
+  background: #FFFFFF !important;
+}
+
+/* Stats and feature cards */
+html.light [class*="stat"],
+html.light [class*="feature"] {
+  background: #FFFFFF !important;
+}
+
+/* Blog cards in light mode */
+html.light article {
+  background: #FFFFFF !important;
+}
+
+/* Testimonial cards */
+html.light blockquote {
+  background: #FFFFFF !important;
+  border-left-color: #8B5CF6 !important;
+}
+
+/* Badge and tag styles */
+html.light .badge,
+html.light [class*="badge"] {
+  background: rgba(139, 92, 246, 0.1) !important;
+  color: #7C3AED !important;
+}
+
+/* Hero section text */
+html.light .hero-text {
+  color: #1E293B !important;
+}
+
+/* Specific overrides for common patterns */
+html.light .bg-gradient-to-br.from-primary-500\/10,
+html.light .bg-gradient-to-br.from-accent-500\/10 {
+  background: rgba(139, 92, 246, 0.05) !important;
+}
+
+/* Prose styles for blog content in light mode */
+html.light .prose-web3 {
+  --tw-prose-body: #475569;
+  --tw-prose-headings: #1E293B;
+  --tw-prose-lead: #64748B;
+  --tw-prose-links: #7C3AED;
+  --tw-prose-bold: #1E293B;
+  --tw-prose-counters: #94A3B8;
+  --tw-prose-bullets: #8B5CF6;
+  --tw-prose-hr: #E2E8F0;
+  --tw-prose-quotes: #334155;
+  --tw-prose-quote-borders: #8B5CF6;
+  --tw-prose-captions: #64748B;
+  --tw-prose-code: #7C3AED;
+  --tw-prose-pre-code: #E2E8F0;
+  --tw-prose-pre-bg: #1E293B;
+  --tw-prose-th-borders: #CBD5E1;
+  --tw-prose-td-borders: #E2E8F0;
+}
+
+/* Range input in light mode */
+html.light input[type="range"] {
+  background: #E2E8F0 !important;
+}
+
+html.light input[type="range"]::-webkit-slider-thumb {
+  background: #8B5CF6;
+}
+
+/* Calculator specific light mode */
+html.light .bg-dark-700,
+html.light .bg-dark-800 {
+  background-color: #F1F5F9 !important;
+}
+
+html.light .bg-dark-600:hover {
+  background-color: #E2E8F0 !important;
+}
+
+/* Plan buttons in light mode */
+html.light button.bg-dark-700 {
+  background-color: #F1F5F9 !important;
+  color: #475569 !important;
+}
+
+html.light button.bg-dark-700:hover {
+  background-color: #E2E8F0 !important;
+}
+
+/* Theme toggle button */
+html.light .theme-toggle {
+  background-color: #F1F5F9 !important;
+  color: #475569 !important;
+}
+
+/* Wallet connect button in light mode */
+html.light .wallet-btn {
+  background: linear-gradient(135deg, #8B5CF6 0%, #6366F1 100%) !important;
+  color: white !important;
+}
+
+/* Hero section specific */
+html.light .hero-section {
+  background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 50%, #EDE9FE 100%) !important;
+}
+
+/* Section alternating backgrounds */
+html.light section:nth-child(odd) {
+  background-color: #FFFFFF;
+}
+
+html.light section:nth-child(even) {
+  background-color: #F8FAFC;
+}
+
+/* Absolute positioned backgrounds in light mode */
+html.light .absolute.bg-dark-900,
+html.light .absolute.bg-dark-950 {
+  background-color: #FFFFFF !important;
+}
+
+/* Contact form specific */
+html.light .contact-form input,
+html.light .contact-form textarea {
+  background: #FFFFFF !important;
+  border-color: #E2E8F0 !important;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-inter);
+  overflow-x: hidden;
+}
+
+/* Web3 Gradient Text */
+.gradient-text {
+  background: linear-gradient(135deg, #8B5CF6 0%, #3B82F6 50%, #06B6D4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-animated {
+  background: linear-gradient(90deg, #8B5CF6, #3B82F6, #06B6D4, #8B5CF6);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shift 5s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Glassmorphism Card */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+}
+
+.glass-card-hover {
+  transition: all 0.3s ease;
+}
+
+.glass-card-hover:hover {
+  border-color: rgba(139, 92, 246, 0.3);
+  box-shadow: 0 0 30px -5px rgba(139, 92, 246, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Glowing Border Effect */
+.glow-border {
+  position: relative;
+}
+
+.glow-border::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(135deg, #8B5CF6 0%, #3B82F6 50%, #06B6D4 100%);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.glow-border:hover::before {
+  opacity: 1;
+}
+
+/* Animated Background */
+.animated-bg {
+  background: linear-gradient(-45deg, #0F172A, #1E1B4B, #172554, #0F172A);
+  background-size: 400% 400%;
+  animation: gradient-bg 15s ease infinite;
+}
+
+@keyframes gradient-bg {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Network Lines Animation (for blockchain effect) */
+.network-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.network-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+    linear-gradient(90deg, transparent 49.5%, rgba(148, 163, 184, 0.05) 49.5%, rgba(148, 163, 184, 0.05) 50.5%, transparent 50.5%),
+    linear-gradient(0deg, transparent 49.5%, rgba(148, 163, 184, 0.05) 49.5%, rgba(148, 163, 184, 0.05) 50.5%, transparent 50.5%);
+  background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+  pointer-events: none;
+}
+
+/* Button Styles */
+.btn-primary {
+  background: linear-gradient(135deg, #8B5CF6 0%, #6366F1 100%);
+  color: white;
+  padding: 12px 28px;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.5);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #F8FAFC;
+  padding: 12px 28px;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  border-color: #8B5CF6;
+  background: rgba(139, 92, 246, 0.1);
+}
+
+/* Section styling */
+.section-padding {
+  @apply py-20 lg:py-32 px-6;
+}
+
+.container-custom {
+  @apply max-w-7xl mx-auto;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0F172A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #8B5CF6, #3B82F6);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #7C3AED, #2563EB);
+}
+
+/* Selection */
+::selection {
+  background: rgba(139, 92, 246, 0.3);
+  color: #F8FAFC;
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 2px solid #8B5CF6;
+  outline-offset: 2px;
+}
+
+/* Prose styles for blog content */
+.prose-web3 {
+  --tw-prose-body: #CBD5E1;
+  --tw-prose-headings: #F8FAFC;
+  --tw-prose-lead: #94A3B8;
+  --tw-prose-links: #8B5CF6;
+  --tw-prose-bold: #F8FAFC;
+  --tw-prose-counters: #64748B;
+  --tw-prose-bullets: #8B5CF6;
+  --tw-prose-hr: #334155;
+  --tw-prose-quotes: #E2E8F0;
+  --tw-prose-quote-borders: #8B5CF6;
+  --tw-prose-captions: #94A3B8;
+  --tw-prose-code: #8B5CF6;
+  --tw-prose-pre-code: #CBD5E1;
+  --tw-prose-pre-bg: #1E293B;
+  --tw-prose-th-borders: #475569;
+  --tw-prose-td-borders: #334155;
+}
+
+.prose-web3 a {
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.prose-web3 a:hover {
+  color: #A78BFA;
+}
+
+.prose-web3 code {
+  background: rgba(139, 92, 246, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: var(--font-jetbrains);
+}
+
+.prose-web3 pre {
+  background: #1E293B !important;
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  border-radius: 12px;
+}
+
+/* Loading Spinner */
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(139, 92, 246, 0.2);
+  border-top-color: #8B5CF6;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Particle Effect Container */
+.particles-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Hide mobile menu when not active */
+@media (max-width: 768px) {
+  .mobile-menu-hidden {
+    display: none;
+  }
+}
+
+/* Responsive Typography */
+@layer utilities {
+  .text-responsive-xl {
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl;
+  }
+  
+  .text-responsive-lg {
+    @apply text-2xl sm:text-3xl md:text-4xl;
+  }
+  
+  .text-responsive-md {
+    @apply text-xl sm:text-2xl md:text-3xl;
+  }
+}

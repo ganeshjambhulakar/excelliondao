@@ -1,0 +1,40 @@
+{
+  "name": "excelliondao-website",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "node --max-old-space-size=4096 server.js",
+    "start:prod": "NODE_ENV=production node --max-old-space-size=4096 --max-wasm-size=16777216 server.js",
+    "start:next": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.90.12",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "framer-motion": "^12.23.25",
+    "gray-matter": "^4.0.3",
+    "helmet": "^8.0.0",
+    "lucide-react": "^0.556.0",
+    "next": "14.2.33",
+    "react": "^18",
+    "react-dom": "^18",
+    "reading-time": "^1.5.0",
+    "viem": "^2.41.2",
+    "wagmi": "^3.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.33",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}
