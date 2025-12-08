@@ -59,11 +59,8 @@ const nextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
   
-  // Experimental features disabled for Vercel compatibility
-  // optimizeCss requires 'critters' package and can cause build issues
-  // experimental: {
-  //   optimizeCss: true,
-  // },
+  // Explicitly disable experimental features that require critters
+  experimental: {},
   
   // Webpack configuration to reduce memory usage
   webpack: (config, { isServer }) => {
