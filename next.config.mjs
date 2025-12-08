@@ -1,8 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Enable standalone output for optimized production builds
-  // If you encounter memory issues, comment out this line
-  output: process.env.DISABLE_STANDALONE === 'true' ? undefined : 'standalone',
+  // Disabled for Vercel (Vercel handles deployment differently)
+  // Enable for custom server deployments
+  output: process.env.VERCEL ? undefined : (process.env.DISABLE_STANDALONE === 'true' ? undefined : 'standalone'),
   
   // Production optimizations
   compress: true,
@@ -58,10 +59,11 @@ const nextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
   
-  // Experimental features for better performance
-  experimental: {
-    optimizeCss: true,
-  },
+  // Experimental features disabled for Vercel compatibility
+  // optimizeCss requires 'critters' package and can cause build issues
+  // experimental: {
+  //   optimizeCss: true,
+  // },
   
   // Webpack configuration to reduce memory usage
   webpack: (config, { isServer }) => {
