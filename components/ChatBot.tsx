@@ -131,7 +131,7 @@ export default function ChatBot() {
         setErrorMessage(data.error || 'Failed to submit. Please try again.');
         setStatus('error');
       }
-    } catch (error) {
+    } catch {
       setErrorMessage('Network error. Please check your connection and try again.');
       setStatus('error');
     }
@@ -185,7 +185,7 @@ export default function ChatBot() {
                 </div>
                 <div>
                   <h3 className="text-white font-semibold">Get Help</h3>
-                  <p className="text-white/80 text-xs">Tell us what you need and we'll assist you</p>
+                  <p className="text-white/80 text-xs">Tell us what you need and we&apos;ll assist you</p>
                 </div>
               </div>
               <button
@@ -279,7 +279,7 @@ export default function ChatBot() {
                     <label htmlFor="chat-name" className="block text-sm font-medium text-white mb-1">
                       Your Name <span className="text-red-400">*</span>
                     </label>
-                    <p className="text-dark-500 text-xs mb-2">We'll use this to address you in our response</p>
+                    <p className="text-dark-500 text-xs mb-2">We&apos;ll use this to address you in our response</p>
                     <input
                       type="text"
                       id="chat-name"
@@ -297,7 +297,7 @@ export default function ChatBot() {
                     <label htmlFor="chat-email" className="block text-sm font-medium text-white mb-1">
                       Email Address <span className="text-red-400">*</span>
                     </label>
-                    <p className="text-dark-500 text-xs mb-2">We'll send our response to this email</p>
+                    <p className="text-dark-500 text-xs mb-2">We&apos;ll send our response to this email</p>
                     <input
                       type="email"
                       id="chat-email"
@@ -369,7 +369,7 @@ export default function ChatBot() {
                       maxLength={1000}
                       rows={5}
                       className="w-full px-4 py-2 bg-dark-800 border border-dark-700 rounded-lg text-white placeholder:text-dark-500 focus:outline-none focus:border-primary-500 transition-colors resize-none"
-                      placeholder="Example: I tried to make a payment using ETH, but the transaction failed. I was on the checkout page and clicked 'Pay Now', but nothing happened. I'm using Chrome browser on Windows..."
+                      placeholder="Example: I tried to make a payment using ETH, but the transaction failed. I was on the checkout page and clicked &apos;Pay Now&apos;, but nothing happened. I&apos;m using Chrome browser on Windows..."
                     />
                     <p className="text-dark-500 text-xs mt-1">
                       💡 Tip: The more details you provide, the faster we can help you!
@@ -396,17 +396,17 @@ export default function ChatBot() {
                     <div className="p-4 rounded-lg bg-emerald-500/10 border border-emerald-500/30">
                       <div className="flex items-start gap-2 mb-2">
                         <AlertCircle className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
-                        <p className="text-emerald-400 text-sm font-medium">Thank you! We've received your message</p>
+                        <p className="text-emerald-400 text-sm font-medium">Thank you! We&apos;ve received your message</p>
                       </div>
                       <p className="text-emerald-300 text-sm ml-7 mb-3">
-                        We'll review your request and get back to you within 24 hours via email.
+                        We&apos;ll review your request and get back to you within 24 hours via email.
                       </p>
                       <div className="ml-7 p-3 rounded bg-dark-800/50 border border-dark-700">
                         <p className="text-dark-400 text-xs font-medium mb-1">What happens next?</p>
                         <ul className="text-dark-500 text-xs space-y-1 list-disc list-inside">
                           <li>Our team will review your request</li>
-                          <li>You'll receive an email confirmation shortly</li>
-                          <li>We'll respond within 24 hours</li>
+                          <li>You&apos;ll receive an email confirmation shortly</li>
+                          <li>We&apos;ll respond within 24 hours</li>
                         </ul>
                       </div>
                       <p className="text-emerald-300/80 text-xs ml-7 mt-3">

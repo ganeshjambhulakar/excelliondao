@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { TrendingUp, ArrowRight, DollarSign, Users, Zap } from 'lucide-react';
+import { TrendingUp, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
 const caseStudies = [

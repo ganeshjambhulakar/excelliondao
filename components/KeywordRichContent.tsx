@@ -112,7 +112,7 @@ export default function KeywordRichContent() {
             <div className="order-1 md:order-2">
               <p className="text-dark-300 text-lg mb-6 leading-relaxed">
                 Our <strong className="text-white">crypto payment</strong> platform enables businesses to accept 
-                <strong className="text-white"> cryptocurrency payments</strong> seamlessly. Whether you're selling 
+                <strong className="text-white"> cryptocurrency payments</strong> seamlessly. Whether you&apos;re selling 
                 products, services, or managing <strong className="text-white">subscriptions</strong>, our 
                 <strong className="text-white"> crypto payment gateway</strong> makes it easy.
               </p>

@@ -396,9 +396,11 @@ export default function BlogPost({ params }: Props) {
           <div className="flex flex-wrap items-center gap-6 text-dark-400">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-500/30">
-                <img 
+                <Image 
                   src={post.author.avatar} 
                   alt={post.author.name}
+                  width={40}
+                  height={40}
                   className="w-full h-full object-cover"
                 />
               </div>

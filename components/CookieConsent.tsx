@@ -34,7 +34,7 @@ export default function CookieConsent() {
       try {
         const savedPrefs = JSON.parse(cookieConsent);
         setPreferences(savedPrefs);
-      } catch (e) {
+      } catch {
         // If parsing fails, use defaults
       }
     }

@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Target, Eye, Rocket, Code, Shield, Globe, Zap, ChevronRight, Linkedin, Twitter, Github } from 'lucide-react';
+import { Target, Eye, Rocket, Code, Shield, Globe, Zap, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 
 const values = [
