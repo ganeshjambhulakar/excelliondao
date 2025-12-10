@@ -19,6 +19,7 @@ const staticPosts: Record<string, {
   category: string;
   tags: string[];
   author: { name: string; avatar: string };
+  coverImage?: string;
 }> = {
   'introduction-to-nft-subscriptions': {
     title: 'NFT Subscription Platform: Complete Guide to NFT Subscriptions',
