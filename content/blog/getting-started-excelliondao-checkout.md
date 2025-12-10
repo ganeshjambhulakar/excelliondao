@@ -6,7 +6,8 @@ category: "Tutorial"
 tags: ["Tutorial", "Integration", "Checkout", "elite-pass"]
 author:
   name: "Michael Roberts"
-  avatar: "MR"
+  avatar: "https://i.pravatar.cc/150?img=12"
+coverImage: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=400&fit=crop&q=80"
 ---
 
 ## Quick Start Guide
@@ -45,7 +46,7 @@ const checkout = createElitePassClient({
 const session = await checkout.createSession({
   amount: 99.99,
   currency: 'USD',
-  acceptedCrypto: ['ETH', 'USDT', 'MATIC'],
+  acceptedCrypto: ['ETH', 'MATIC', 'USDT'],
   metadata: {
     orderId: 'order_123',
     customerId: 'cust_456'

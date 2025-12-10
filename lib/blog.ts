@@ -29,6 +29,7 @@ export interface BlogPostMeta {
   readTime: string;
   category: string;
   tags: string[];
+  coverImage?: string;
 }
 
 function ensureDirectoryExists() {
@@ -62,6 +63,7 @@ export function getAllPosts(): BlogPostMeta[] {
         readTime: stats.text,
         category: data.category || 'General',
         tags: data.tags || [],
+        coverImage: data.coverImage,
       };
     })
     .sort((a, b) => {
@@ -160,6 +162,7 @@ export function getRelatedPosts(slug: string, limit: number = 3): BlogPostMeta[]
 
   return scoredPosts;
 }
+
 
 
 

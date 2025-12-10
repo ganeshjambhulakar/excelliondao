@@ -14,10 +14,11 @@ const footerLinks = {
     { name: 'Contact', href: '/contact' },
   ],
   resources: [
-    { name: 'Documentation', href: '#' },
-    { name: 'API Reference', href: '#' },
-    { name: 'Integration Guide', href: '#' },
-    { name: 'FAQ', href: '/contact#faq' },
+    { name: 'Documentation', href: 'https://docs.excelliondao.com' },
+    { name: 'API Reference', href: 'https://docs.excelliondao.com/api' },
+    { name: 'Integration Guide', href: 'https://docs.excelliondao.com/integration' },
+    { name: 'FAQ', href: '/#faq' },
+    { name: 'Status Page', href: 'https://status.excelliondao.com' },
   ],
   legal: [
     { name: 'Privacy Policy', href: '#' },

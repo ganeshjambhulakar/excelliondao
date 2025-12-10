@@ -35,7 +35,7 @@ const socialLinks = [
 const faqs = [
   {
     question: 'What blockchains do you support?',
-    answer: 'We currently support Ethereum and Polygon networks. We are actively working on adding support for more chains including Arbitrum, Optimism, and BSC.',
+    answer: 'We support all major public blockchains including Ethereum, Polygon, BNB Chain, Arbitrum, Optimism, Avalanche, Base, and Solana. We support all EVM-compatible chains and are continuously adding support for new networks. If you need a specific chain, contact us to request support.',
   },
   {
     question: 'How long does integration take?',

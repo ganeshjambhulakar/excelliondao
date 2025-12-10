@@ -1,12 +1,13 @@
 ---
-title: "Introduction to NFT-Based Subscriptions"
-excerpt: "Learn how NFT technology is revolutionizing the subscription economy, enabling true digital ownership and transferability."
+title: "NFT Subscription Platform: Complete Guide to NFT Subscriptions"
+excerpt: "Complete guide to NFT subscriptions and NFT subscription platforms. Learn how NFT subscription services work, how to create NFT subscriptions, and why NFT subscriptions are the future of subscription management."
 date: "2024-12-01"
 category: "Technology"
 tags: ["NFT", "Subscriptions", "Web3", "Smart Contracts"]
 author:
   name: "Alex Thompson"
-  avatar: "AT"
+  avatar: "https://i.pravatar.cc/150?img=33"
+coverImage: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=400&fit=crop&q=80"
 ---
 
 ## What Are NFT Subscriptions?

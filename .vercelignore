@@ -1,0 +1,11 @@
+# Ignore files that shouldn't be deployed to Vercel
+node_modules
+.next
+.env
+.env.local
+.env*.local
+.DS_Store
+*.log
+test.zip
+
+

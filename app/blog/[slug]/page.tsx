@@ -1,6 +1,7 @@
 // Blog utilities (for future dynamic content)
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowLeft, Calendar, Clock, Tag, Share2, Twitter, Linkedin, Facebook, ArrowRight } from 'lucide-react';
 import type { Metadata } from 'next';
 
@@ -20,12 +21,17 @@ const staticPosts: Record<string, {
   author: { name: string; avatar: string };
 }> = {
   'introduction-to-nft-subscriptions': {
-    title: 'Introduction to NFT-Based Subscriptions',
-    excerpt: 'Learn how NFT technology is revolutionizing the subscription economy, enabling true digital ownership and transferability.',
+    title: 'NFT Subscription Platform: Complete Guide to NFT Subscriptions',
+    excerpt: 'Complete guide to NFT subscriptions and NFT subscription platforms. Learn how NFT subscription services work, how to create NFT subscriptions, and why NFT subscriptions are the future of subscription management.',
+    coverImage: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=400&fit=crop&q=80',
       content: `
-## What Are NFT Subscriptions?
+## What Are NFT Subscriptions? Complete Guide to NFT Subscription Platform
 
-NFT-based subscriptions represent a paradigm shift in how we think about subscription services. Instead of a traditional database entry that says "User X has access until Date Y," NFT subscriptions give users a verifiable, transferable token that proves their subscription status.
+NFT subscriptions represent a revolutionary approach to subscription management. An NFT subscription is a blockchain-based subscription model where users receive an NFT (Non-Fungible Token) that represents their subscription access. Our NFT subscription platform enables businesses to create NFT subscriptions, manage subscription NFTs, and offer crypto subscriptions to customers.
+
+### Understanding NFT Subscription Services
+
+NFT subscription services are transforming how businesses manage subscriptions. Unlike traditional subscriptions stored in databases, NFT subscriptions exist on the blockchain, providing true digital ownership. When you create NFT subscriptions through our NFT subscription platform, users receive subscription NFTs that can be transferred, sold, or gifted.
 
 ### The Traditional Subscription Model
 
@@ -37,11 +43,13 @@ In the conventional model, when you subscribe to a service:
 
 ### The NFT Subscription Advantage
 
-With NFT-based subscriptions:
-- **True Ownership**: Your subscription is a token you own
-- **Transferability**: Sell or gift your subscription
-- **Permanence**: Exists on the blockchain forever
-- **Transparency**: Anyone can verify subscription status
+With our NFT subscription platform and NFT subscription service:
+- **True Ownership**: Your NFT subscription is a token you own on the blockchain
+- **Transferability**: Sell or gift your NFT subscription to others
+- **Permanence**: NFT subscriptions exist on the blockchain forever
+- **Transparency**: Anyone can verify NFT subscription status
+- **Crypto Subscriptions**: Pay for NFT subscriptions using cryptocurrency
+- **Secondary Markets**: Create new revenue streams through subscription NFT trading
 
 ## How It Works
 
@@ -74,27 +82,29 @@ Enterprise software licenses become tradeable assets. Companies can resell unuse
 ### Membership Programs
 Gym memberships, club access, and loyalty programs all become transferable assets with real market value.
 
-## Getting Started with ExcellionDao
+## Getting Started with NFT Subscription Platform
 
-Ready to implement NFT subscriptions in your platform? Our elite-pass npm package makes it simple:
+Ready to implement NFT subscriptions in your platform? Our NFT subscription service and elite-pass npm package make it simple:
 
 1. Install the package: \`npm install elite-pass\`
-2. Configure your plans
-3. Deploy to testnet
-4. Go live on mainnet
+2. Configure your NFT subscription plans
+3. Set up crypto subscription payment options
+4. Deploy NFT subscriptions to testnet
+5. Go live with NFT subscriptions on mainnet
 
-Contact us for a demo and see how NFT subscriptions can transform your business model.
+Our NFT subscription platform is the best choice for businesses looking to create NFT subscriptions, manage subscription NFTs, and offer crypto subscriptions. Contact us for a demo and see how NFT subscriptions can transform your business model.
     `,
     date: 'December 1, 2024',
     readTime: '8 min read',
     category: 'Technology',
     tags: ['NFT', 'Subscriptions', 'Web3', 'Smart Contracts'],
-    author: { name: 'Alex Thompson', avatar: 'AT' },
+    author: { name: 'Alex Thompson', avatar: 'https://i.pravatar.cc/150?img=33' },
   },
   'why-blockchain-payments-future': {
-    title: 'Why Blockchain Payments Are the Future',
-    excerpt: 'Explore the advantages of cryptocurrency payments over traditional systems: lower fees, instant settlement, and global reach.',
-    content: `
+    title: 'Crypto Payment Gateway: Why Cryptocurrency Payments Are the Future',
+    excerpt: 'Explore why crypto payment gateways and cryptocurrency payments are replacing traditional payment systems. Learn about crypto payment benefits, crypto subscription options, and how to accept crypto payments.',
+    coverImage: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=400&fit=crop&q=80',
+      content: `
 ## The Case for Blockchain Payments
 
 The global payments industry processes over $2 quadrillion annually. Yet, the underlying infrastructure—credit cards, wire transfers, and clearinghouses—was designed decades ago. Blockchain technology offers a fundamental reimagining of how money moves.
@@ -153,11 +163,12 @@ Ready to future-proof your payment stack? [Contact us](/contact) to learn more.
     readTime: '6 min read',
     category: 'Industry',
     tags: ['Blockchain', 'Payments', 'Future', 'Finance'],
-    author: { name: 'Sarah Chen', avatar: 'SC' },
+    author: { name: 'Sarah Chen', avatar: 'https://i.pravatar.cc/150?img=47' },
   },
   'getting-started-excelliondao-checkout': {
-    title: 'Getting Started with ExcellionDao Checkout',
-    excerpt: 'A step-by-step guide to integrating our crypto checkout system into your e-commerce platform.',
+    title: 'How to Accept Crypto Payments: Complete Crypto Payment Gateway Guide',
+    excerpt: 'Step-by-step guide to accepting cryptocurrency payments. Learn how to integrate our crypto payment gateway, accept crypto payments, and process crypto transactions on your e-commerce platform.',
+    coverImage: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop&q=80',
       content: `
 ## Quick Start Guide
 
@@ -195,7 +206,7 @@ const checkout = createElitePassClient({
 const session = await checkout.createSession({
   amount: 99.99,
   currency: 'USD',
-  acceptedCrypto: ['ETH', 'USDT', 'MATIC'],
+  acceptedCrypto: ['ETH', 'MATIC', 'USDT'],
   metadata: {
     orderId: 'order_123',
     customerId: 'cust_456'
@@ -294,7 +305,7 @@ Happy building! 🚀
     readTime: '10 min read',
     category: 'Tutorial',
     tags: ['Tutorial', 'Integration', 'Checkout', 'elite-pass'],
-    author: { name: 'Michael Roberts', avatar: 'MR' },
+    author: { name: 'Michael Roberts', avatar: 'https://i.pravatar.cc/150?img=12' },
   },
 };
 
@@ -309,12 +320,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: post.title,
     description: post.excerpt,
+    keywords: post.tags,
     openGraph: {
       title: post.title,
       description: post.excerpt,
       type: 'article',
       publishedTime: post.date,
       authors: [post.author.name],
+      tags: post.tags,
+      images: post.coverImage ? [post.coverImage] : undefined,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.excerpt,
+      images: post.coverImage ? [post.coverImage] : undefined,
+    },
+    alternates: {
+      canonical: `https://excelliondao.com/blog/${params.slug}`,
     },
   };
 }
@@ -345,6 +368,20 @@ export default function BlogPost({ params }: Props) {
             Back to Blog
           </Link>
 
+          {/* Cover Image */}
+          {post.coverImage && (
+            <div className="mb-8 rounded-xl overflow-hidden border border-dark-700 relative h-[400px]">
+              <Image 
+                src={post.coverImage} 
+                alt={post.title}
+                fill
+                className="object-cover"
+                sizes="100vw"
+                priority
+              />
+            </div>
+          )}
+
           {/* Category */}
           <span className="inline-block px-3 py-1 text-xs font-medium bg-primary-500/20 text-primary-300 rounded-full border border-primary-500/30 mb-4">
             {post.category}
@@ -358,8 +395,12 @@ export default function BlogPost({ params }: Props) {
           {/* Meta */}
           <div className="flex flex-wrap items-center gap-6 text-dark-400">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-white text-sm font-bold">
-                {post.author.avatar}
+              <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-500/30">
+                <img 
+                  src={post.author.avatar} 
+                  alt={post.author.name}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <span className="text-white">{post.author.name}</span>
             </div>
@@ -378,6 +419,31 @@ export default function BlogPost({ params }: Props) {
       {/* Content */}
       <section className="pb-20 px-6">
         <div className="max-w-3xl mx-auto">
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'BlogPosting',
+                headline: post.title,
+                description: post.excerpt,
+                image: post.coverImage || 'https://excelliondao.com/og-image.png',
+                datePublished: post.date,
+                author: {
+                  '@type': 'Person',
+                  name: post.author.name,
+                },
+                publisher: {
+                  '@type': 'Organization',
+                  name: 'ExcellionDao',
+                  logo: {
+                    '@type': 'ImageObject',
+                    url: 'https://excelliondao.com/logo.png',
+                  },
+                },
+              }),
+            }}
+          />
           <article className="prose-web3 prose prose-lg max-w-none">
             {/* Render markdown content */}
             <div 

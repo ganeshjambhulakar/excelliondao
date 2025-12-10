@@ -6,7 +6,8 @@ category: "Industry"
 tags: ["Blockchain", "Payments", "Future", "Finance"]
 author:
   name: "Sarah Chen"
-  avatar: "SC"
+  avatar: "https://i.pravatar.cc/150?img=47"
+coverImage: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=400&fit=crop&q=80"
 ---
 
 ## The Case for Blockchain Payments

@@ -49,8 +49,8 @@ export default function Newsletter() {
             Stay in the <span className="gradient-text">Loop</span>
           </h2>
           <p className="text-dark-400 mb-8 max-w-md mx-auto">
-            Subscribe to our newsletter for the latest updates on blockchain payments, 
-            new features, and industry insights.
+            Subscribe to our newsletter for the latest updates on NFT subscriptions, 
+            crypto payments, crypto payment gateways, and cryptocurrency payment solutions.
           </p>
 
           {/* Form */}
@@ -104,6 +104,7 @@ export default function Newsletter() {
     </section>
   );
 }
+
 
 
 

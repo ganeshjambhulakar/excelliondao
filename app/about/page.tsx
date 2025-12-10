@@ -27,36 +27,36 @@ const values = [
   },
 ];
 
-const team = [
-  {
-    name: 'Ganesh Jambhulakar',
-    role: 'Founder',
-    avatar: 'GJ',
-    bio: 'Leading the vision for decentralized payments and NFT subscriptions. Specialist in smart contract security and cross-chain interoperability.',
-    social: { twitter: '#', linkedin: '#', github: '#' },
-  },
-  {
-    name: 'Pramod Chavhan',
-    role: 'Data Scientist',
-    avatar: 'PC',
-    bio: 'Expert in data analytics and machine learning models for financial systems.',
-    social: { twitter: '#', linkedin: '#', github: '#' },
-  },
-  {
-    name: 'Chetan Gujjar',
-    role: 'Senior Python Developer',
-    avatar: 'CG',
-    bio: 'Specializing in backend infrastructure and high-performance Python services.',
-    social: { twitter: '#', linkedin: '#' },
-  },
-  {
-    name: 'Vishal Maske',
-    role: 'MERN Expert',
-    avatar: 'VM',
-    bio: 'Full-stack JavaScript expert focusing on scalable React and Node.js architectures.',
-    social: { twitter: '#', github: '#' },
-  },
-];
+// const team = [
+//   {
+//     name: 'Ganesh Jambhulakar',
+//     role: 'Founder',
+//     avatar: 'https://i.pravatar.cc/150?img=68',
+//     bio: 'Leading the vision for decentralized payments and NFT subscriptions. Specialist in smart contract security and cross-chain interoperability.',
+//     social: { twitter: '#', linkedin: '#', github: '#' },
+//   },
+//   {
+//     name: 'Pramod Chavhan',
+//     role: 'Data Scientist',
+//     avatar: 'https://i.pravatar.cc/150?img=15',
+//     bio: 'Expert in data analytics and machine learning models for financial systems.',
+//     social: { twitter: '#', linkedin: '#', github: '#' },
+//   },
+//   {
+//     name: 'Chetan Gujjar',
+//     role: 'Senior Python Developer',
+//     avatar: 'https://i.pravatar.cc/150?img=27',
+//     bio: 'Specializing in backend infrastructure and high-performance Python services.',
+//     social: { twitter: '#', linkedin: '#' },
+//   },
+//   {
+//     name: 'Vishal Maske',
+//     role: 'MERN Expert',
+//     avatar: 'https://i.pravatar.cc/150?img=32',
+//     bio: 'Full-stack JavaScript expert focusing on scalable React and Node.js architectures.',
+//     social: { twitter: '#', github: '#' },
+//   },
+// ];
 
 const roadmap = [
   {
@@ -221,7 +221,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team */}
-      <section className="section-padding bg-dark-900">
+      {/* <section className="section-padding bg-dark-900">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -250,8 +250,12 @@ export default function AboutPage() {
                 transition={{ delay: index * 0.1 }}
                 className="glass-card glass-card-hover p-6 text-center group"
               >
-                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center mx-auto mb-4 text-white text-xl font-bold">
-                  {member.avatar}
+                <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-primary-500/30 mx-auto mb-4">
+                  <img 
+                    src={member.avatar} 
+                    alt={member.name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-1">{member.name}</h3>
                 <p className="text-primary-400 text-sm mb-3">{member.role}</p>
@@ -278,7 +282,7 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Roadmap */}
       <section className="section-padding relative">

@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight, Calendar, Clock } from 'lucide-react';
 
 interface BlogPost {
@@ -11,6 +12,7 @@ interface BlogPost {
   date: string;
   readTime: string;
   category: string;
+  coverImage?: string;
 }
 
 interface BlogPreviewProps {
@@ -58,11 +60,23 @@ export default function BlogPreview({ posts }: BlogPreviewProps) {
               transition={{ delay: index * 0.1 }}
               className="glass-card glass-card-hover overflow-hidden group"
             >
-              {/* Image Placeholder with Gradient */}
-              <div className="h-48 bg-gradient-to-br from-primary-500/20 via-accent-500/20 to-dark-800 relative overflow-hidden">
-                <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(139,92,246,0.1)_50%,transparent_75%)] bg-[length:200%_200%] group-hover:animate-gradient-x" />
-                <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 text-xs font-medium bg-primary-500/20 text-primary-300 rounded-full border border-primary-500/30">
+              {/* Cover Image */}
+              <div className="h-48 relative overflow-hidden bg-dark-800">
+                {post.coverImage ? (
+                  <Image 
+                    src={post.coverImage} 
+                    alt={post.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                ) : (
+                  <div className="h-full bg-gradient-to-br from-primary-500/20 via-accent-500/20 to-dark-800">
+                    <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(139,92,246,0.1)_50%,transparent_75%)] bg-[length:200%_200%] group-hover:animate-gradient-x" />
+                  </div>
+                )}
+                <div className="absolute top-4 left-4 z-10">
+                  <span className="px-3 py-1 text-xs font-medium bg-primary-500/20 text-primary-300 rounded-full border border-primary-500/30 backdrop-blur-sm">
                     {post.category}
                   </span>
                 </div>
@@ -109,6 +123,7 @@ export default function BlogPreview({ posts }: BlogPreviewProps) {
     </section>
   );
 }
+
 
 
 

@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Calendar, Clock, Search, ArrowRight } from 'lucide-react';
 import { useState, useMemo } from 'react';
 
@@ -9,30 +10,33 @@ import { useState, useMemo } from 'react';
 const blogPosts = [
   {
     slug: 'introduction-to-nft-subscriptions',
-    title: 'Introduction to NFT-Based Subscriptions',
-    excerpt: 'Learn how NFT technology is revolutionizing the subscription economy, enabling true digital ownership and transferability.',
+    title: 'NFT Subscription Platform: Complete Guide to NFT Subscriptions',
+    excerpt: 'Complete guide to NFT subscriptions and NFT subscription platforms. Learn how NFT subscription services work, how to create NFT subscriptions, and why NFT subscriptions are the future.',
     date: 'Dec 1, 2024',
     readTime: '8 min read',
     category: 'Technology',
     tags: ['NFT', 'Subscriptions', 'Web3'],
+    coverImage: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=400&fit=crop&q=80',
   },
   {
     slug: 'why-blockchain-payments-future',
-    title: 'Why Blockchain Payments Are the Future',
-    excerpt: 'Explore the advantages of cryptocurrency payments over traditional systems: lower fees, instant settlement, and global reach.',
+    title: 'Crypto Payment Gateway: Why Cryptocurrency Payments Are the Future',
+    excerpt: 'Explore why crypto payment gateways and cryptocurrency payments are replacing traditional payment systems. Learn about crypto payment benefits and how to accept crypto payments.',
     date: 'Nov 25, 2024',
     readTime: '6 min read',
     category: 'Industry',
     tags: ['Blockchain', 'Payments', 'Future'],
+    coverImage: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=400&fit=crop&q=80',
   },
   {
     slug: 'getting-started-excelliondao-checkout',
-    title: 'Getting Started with ExcellionDao Checkout',
-    excerpt: 'A step-by-step guide to integrating our crypto checkout system into your e-commerce platform.',
+    title: 'How to Accept Crypto Payments: Complete Crypto Payment Gateway Guide',
+    excerpt: 'Step-by-step guide to accepting cryptocurrency payments. Learn how to integrate our crypto payment gateway and accept crypto payments on your platform.',
     date: 'Nov 18, 2024',
     readTime: '10 min read',
     category: 'Tutorial',
     tags: ['Tutorial', 'Integration', 'Checkout'],
+    coverImage: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop&q=80',
   },
 ];
 
@@ -151,11 +155,23 @@ export default function BlogPage() {
                   transition={{ delay: index * 0.1 }}
                   className="glass-card glass-card-hover overflow-hidden group"
                 >
-                  {/* Image Placeholder */}
-                  <div className="h-48 bg-gradient-to-br from-primary-500/20 via-accent-500/20 to-dark-800 relative overflow-hidden">
-                    <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(139,92,246,0.1)_50%,transparent_75%)] bg-[length:200%_200%] group-hover:animate-gradient-x" />
-                    <div className="absolute top-4 left-4">
-                      <span className="px-3 py-1 text-xs font-medium bg-primary-500/20 text-primary-300 rounded-full border border-primary-500/30">
+                  {/* Cover Image */}
+                  <div className="h-48 relative overflow-hidden bg-dark-800">
+                    {post.coverImage ? (
+                      <Image 
+                        src={post.coverImage} 
+                        alt={post.title}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-300"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      />
+                    ) : (
+                      <div className="h-full bg-gradient-to-br from-primary-500/20 via-accent-500/20 to-dark-800">
+                        <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(139,92,246,0.1)_50%,transparent_75%)] bg-[length:200%_200%] group-hover:animate-gradient-x" />
+                      </div>
+                    )}
+                    <div className="absolute top-4 left-4 z-10">
+                      <span className="px-3 py-1 text-xs font-medium bg-primary-500/20 text-primary-300 rounded-full border border-primary-500/30 backdrop-blur-sm">
                         {post.category}
                       </span>
                     </div>

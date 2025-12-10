@@ -3,14 +3,15 @@
 import { motion } from 'framer-motion';
 import { Blocks, CreditCard, Wallet, Car, UtensilsCrossed, Store, Check, ArrowRight, Code } from 'lucide-react';
 import Link from 'next/link';
+import SupportedChains from '@/components/SupportedChains';
 
 const services = [
   {
     id: 'nft-subscriptions',
     icon: Blocks,
-    title: 'NFT Subscription Management',
-    subtitle: 'Revolutionary subscription ownership',
-    description: 'Transform your subscription model with NFT-based ownership. Users truly own their subscriptions and can transfer, sell, or gift them.',
+    title: 'NFT Subscription Platform & Service',
+    subtitle: 'Best NFT Subscription Platform',
+    description: 'Transform your subscription model with our NFT subscription platform. Create NFT subscriptions, manage subscription NFTs, and offer crypto subscriptions. Users truly own their NFT subscriptions and can transfer, sell, or gift them.',
     color: 'from-purple-500 to-violet-600',
     features: [
       'True ownership via ERC-721 tokens',
@@ -29,12 +30,12 @@ const services = [
   {
     id: 'checkout',
     icon: CreditCard,
-    title: 'Blockchain Checkout System',
-    subtitle: 'One-click crypto payments',
-    description: 'Seamlessly accept cryptocurrency payments on any e-commerce platform. Simple integration, instant settlement, and zero chargebacks.',
+    title: 'Crypto Payment Gateway & Checkout',
+    subtitle: 'Accept Crypto Payments Instantly',
+    description: 'Leading crypto payment gateway for accepting cryptocurrency payments. Accept crypto payments, process crypto transactions, and handle crypto subscriptions on any e-commerce platform. Simple integration, instant settlement, and zero chargebacks.',
     color: 'from-blue-500 to-cyan-500',
     features: [
-      'Multi-currency support (ETH, USDT, MATIC)',
+      'Support for ETH, MATIC, and USDT',
       'One-click checkout widget',
       'Real-time price conversion',
       'Instant settlement to your wallet',
@@ -50,9 +51,9 @@ const services = [
   {
     id: 'payments',
     icon: Wallet,
-    title: 'Crypto Payment Gateway',
-    subtitle: 'Enterprise payment infrastructure',
-    description: 'Full-featured payment gateway for businesses of all sizes. Simple REST APIs, webhooks, and the elite-pass npm package for seamless integration.',
+    title: 'Cryptocurrency Payment Platform',
+    subtitle: 'Complete Crypto Payment Solution',
+    description: 'Full-featured crypto payment gateway and cryptocurrency payment platform for businesses of all sizes. Accept cryptocurrency payments, process crypto payments, and manage crypto subscriptions. Simple REST APIs, webhooks, and the elite-pass npm package for seamless integration.',
     color: 'from-emerald-500 to-teal-500',
     features: [
       'RESTful API & webhooks',
@@ -138,9 +139,9 @@ export default function ServicesPage() {
             transition={{ delay: 0.1 }}
             className="text-responsive-xl font-bold text-white mb-6"
           >
-            Blockchain Payment
+            Leading NFT Subscription Platform
             <br />
-            <span className="gradient-text">Solutions</span>
+            <span className="gradient-text">and Crypto Payment Gateway</span>
           </motion.h1>
           
           <motion.p
@@ -149,8 +150,9 @@ export default function ServicesPage() {
             transition={{ delay: 0.2 }}
             className="text-lg text-dark-300 max-w-2xl mx-auto"
           >
-            From NFT subscriptions to enterprise payment gateways, we provide 
-            everything you need to embrace blockchain payments with the elite-pass npm package.
+            Best NFT subscription service and crypto payment gateway. Accept cryptocurrency payments, 
+            create NFT subscriptions, manage crypto subscriptions, and process crypto transactions. 
+            Everything you need for NFT subscriptions and crypto payments with the elite-pass npm package.
           </motion.p>
         </div>
       </section>
@@ -275,6 +277,9 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+
+      {/* Supported Chains */}
+      <SupportedChains />
 
       {/* Supported Stacks */}
       <section className="section-padding bg-dark-950">

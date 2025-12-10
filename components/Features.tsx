@@ -6,14 +6,14 @@ import { Blocks, CreditCard, Wallet, Car, UtensilsCrossed, Store, Shield, Zap, G
 const features = [
   {
     icon: Blocks,
-    title: 'NFT Subscriptions',
-    description: 'Revolutionary subscription management using NFTs. Own your subscription, transfer it, and enjoy true digital ownership.',
+    title: 'NFT Subscription Platform',
+    description: 'Best NFT subscription service using blockchain technology. Create transferable NFT subscriptions, manage subscription NFTs, and offer crypto subscriptions to customers.',
     color: 'from-purple-500 to-violet-600',
   },
   {
     icon: CreditCard,
-    title: 'Crypto Checkout',
-    description: 'One-click cryptocurrency payments for any e-commerce platform. Accept ETH, USDT, and more with instant settlement.',
+    title: 'Crypto Payment Gateway',
+    description: 'Leading crypto payment gateway for accepting cryptocurrency payments. Process crypto payments, accept crypto subscriptions, and handle crypto transactions securely.',
     color: 'from-blue-500 to-cyan-500',
   },
   {
@@ -37,7 +37,7 @@ const features = [
   {
     icon: Wallet,
     title: 'Multi-Chain Support',
-    description: 'Deploy on Ethereum, Polygon, and more. Choose the network that fits your needs and budget.',
+    description: 'Deploy on Ethereum, Polygon, BNB Chain, Arbitrum, Optimism, Avalanche, Base, Solana, and all major public blockchains.',
     color: 'from-indigo-500 to-purple-500',
   },
 ];
@@ -83,11 +83,11 @@ export default function Features() {
             Our Solutions
           </span>
           <h2 className="text-responsive-lg font-bold text-white mb-4">
-            Powerful Blockchain <span className="gradient-text">Payment Tools</span>
+            NFT Subscription & <span className="gradient-text">Crypto Payment</span> Solutions
           </h2>
           <p className="text-dark-400 max-w-2xl mx-auto">
-            Everything you need to integrate cryptocurrency payments into your business,
-            powered by cutting-edge blockchain technology.
+            Complete NFT subscription platform and crypto payment gateway. Accept cryptocurrency payments, 
+            manage NFT subscriptions, and process crypto transactions with our secure blockchain payment solutions.
           </p>
         </motion.div>
 

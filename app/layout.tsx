@@ -5,6 +5,11 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Web3Provider from "@/components/providers/Web3Provider";
 import { ToastProvider } from "@/components/Toast";
+import StructuredData from "@/components/StructuredData";
+import ScrollButtons from "@/components/ScrollButtons";
+import ChatBot from "@/components/ChatBot";
+import CookieConsent from "@/components/CookieConsent";
+import { ChatProvider } from "@/components/contexts/ChatContext";
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -13,12 +18,18 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://excelliondao.com'),
-  title: {
-    default: "ExcellionDao - Blockchain Payment Solutions",
-    template: "%s | ExcellionDao",
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5,
+    userScalable: true,
   },
-  description: "Building the future of blockchain payments. NFT subscriptions, crypto checkout systems, and seamless payment solutions for modern businesses.",
-  keywords: ["blockchain", "crypto payments", "NFT subscriptions", "web3", "decentralized", "cryptocurrency", "ethereum", "payment gateway"],
+  title: {
+    default: "NFT Subscription Platform | Crypto Payment Solutions | ExcellionDao",
+    template: "%s | NFT Subscription & Crypto Payments | ExcellionDao",
+  },
+  description: "Leading NFT subscription platform and crypto payment gateway. Accept cryptocurrency payments, manage NFT subscriptions, and process crypto transactions with our secure blockchain payment solutions.",
+  keywords: ["NFT subscription", "NFT subscriptions", "crypto subscription", "cryptocurrency subscription", "blockchain subscription", "crypto payment", "cryptocurrency payment", "crypto payments", "NFT payment", "blockchain payment", "crypto checkout", "cryptocurrency checkout", "NFT checkout", "crypto gateway", "blockchain gateway", "web3 payment", "decentralized payment", "ethereum payment", "polygon payment", "crypto subscription service", "NFT subscription service"],
   authors: [{ name: "ExcellionDao" }],
   creator: "ExcellionDao",
   openGraph: {
@@ -26,8 +37,8 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://excelliondao.com",
     siteName: "ExcellionDao",
-    title: "ExcellionDao - Blockchain Payment Solutions",
-    description: "Building the future of blockchain payments. NFT subscriptions, crypto checkout systems, and seamless payment solutions.",
+    title: "NFT Subscription Platform | Crypto Payment Solutions | ExcellionDao",
+    description: "Leading NFT subscription platform and crypto payment gateway. Accept cryptocurrency payments, manage NFT subscriptions, and process crypto transactions securely.",
     images: [
       {
         url: "/og-image.png",
@@ -39,8 +50,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ExcellionDao - Blockchain Payment Solutions",
-    description: "Building the future of blockchain payments. NFT subscriptions and crypto checkout systems.",
+    title: "NFT Subscription Platform | Crypto Payment Solutions",
+    description: "Leading NFT subscription platform and crypto payment gateway. Accept cryptocurrency payments and manage NFT subscriptions.",
     images: ["/og-image.png"],
     creator: "@excelliondao",
   },
@@ -56,9 +67,10 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
+    icon: "/icon.svg",
+  },
+  alternates: {
+    canonical: 'https://excelliondao.com',
   },
 };
 
@@ -68,17 +80,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark" suppressHydrationWarning>
-      <body className={`${inter.variable} font-sans antialiased`}>
+    <html lang="en" className="dark" suppressHydrationWarning style={{ width: '100%', maxWidth: '100vw', overflowX: 'hidden' }}>
+      <body className={`${inter.variable} font-sans antialiased`} style={{ width: '100%', maxWidth: '100vw', overflowX: 'hidden' }}>
+        <StructuredData />
         <Web3Provider>
           <ToastProvider>
-            <div className="min-h-screen flex flex-col bg-dark-950 light:bg-gray-50 transition-colors duration-300">
-              <Navbar />
-              <main className="flex-grow">
-                {children}
-              </main>
-              <Footer />
-            </div>
+            <ChatProvider>
+              <div className="min-h-screen flex flex-col bg-dark-950">
+                <Navbar />
+                <main className="flex-grow">
+                  {children}
+                </main>
+                <Footer />
+                <ScrollButtons />
+                <ChatBot />
+                <CookieConsent />
+              </div>
+            </ChatProvider>
           </ToastProvider>
         </Web3Provider>
       </body>

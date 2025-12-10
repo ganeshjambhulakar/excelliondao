@@ -59,7 +59,7 @@ export default function Hero() {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-primary-500"></span>
           </span>
-          <span className="text-sm text-primary-300">Now Live on Ethereum & Polygon</span>
+          <span className="text-sm text-primary-300">Supporting All Major Blockchains</span>
         </motion.div>
 
         {/* Main Heading */}
@@ -69,9 +69,9 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="text-responsive-xl font-bold leading-tight mb-6"
         >
-          <span className="text-white">Building the Future of</span>
+          <span className="text-white">Leading NFT Subscription Platform</span>
           <br />
-          <span className="gradient-text-animated">Blockchain Payments</span>
+          <span className="gradient-text-animated">and Crypto Payment Gateway</span>
         </motion.h1>
 
         {/* Subtitle */}
@@ -81,8 +81,8 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-lg md:text-xl text-dark-300 max-w-2xl mx-auto mb-10"
         >
-          NFT-powered subscriptions, seamless crypto checkout, and next-generation 
-          payment solutions for businesses worldwide.
+          Accept cryptocurrency payments, manage NFT subscriptions, and process crypto transactions 
+          with the most secure blockchain payment platform. Leading crypto subscription service for businesses worldwide.
         </motion.p>
 
         {/* CTA Buttons */}

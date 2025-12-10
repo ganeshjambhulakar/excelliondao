@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Hexagon } from 'lucide-react';
-import ThemeToggle from './ThemeToggle';
 import WalletConnect from './WalletConnect';
 
 const navLinks = [
@@ -41,7 +40,7 @@ export default function Navbar() {
           : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 w-full">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
@@ -86,16 +85,14 @@ export default function Navbar() {
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center gap-3">
-            <ThemeToggle />
             <WalletConnect />
           </div>
 
           {/* Mobile Menu Button */}
           <div className="flex md:hidden items-center gap-2">
-            <ThemeToggle />
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 nav-menu-btn"
+              className="p-2 nav-menu-btn min-w-[44px] min-h-[44px] touch-manipulation"
               aria-label="Toggle menu"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -113,7 +110,7 @@ export default function Navbar() {
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden mobile-nav-bg backdrop-blur-xl border-b border-dark-700/50"
           >
-            <div className="px-6 py-4 space-y-1">
+            <div className="px-4 sm:px-6 py-4 space-y-1">
               {navLinks.map((link, index) => (
                 <motion.div
                   key={link.name}

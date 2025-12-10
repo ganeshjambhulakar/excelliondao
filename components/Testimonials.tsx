@@ -8,21 +8,27 @@ const testimonials = [
     quote: "ExcellionDao transformed how we handle subscriptions. The NFT-based system gives our users real ownership.",
     author: "Sarah Chen",
     role: "CTO, TechStart Inc.",
-    avatar: "SC",
+    avatar: "https://i.pravatar.cc/150?img=47",
+    company: "TechStart Inc.",
+    companyLogo: "TS",
     rating: 5,
   },
   {
     quote: "Integration was seamless. We went from zero to accepting crypto payments in less than a day.",
     author: "Michael Rodriguez",
     role: "Founder, CryptoShop",
-    avatar: "MR",
+    avatar: "https://i.pravatar.cc/150?img=12",
+    company: "CryptoShop",
+    companyLogo: "CS",
     rating: 5,
   },
   {
     quote: "The transparency and security of smart contracts give our customers confidence in every transaction.",
     author: "Emily Watson",
     role: "CEO, Digital Ventures",
-    avatar: "EW",
+    avatar: "https://i.pravatar.cc/150?img=9",
+    company: "Digital Ventures",
+    companyLogo: "DV",
     rating: 5,
   },
 ];
@@ -91,14 +97,25 @@ export default function Testimonials() {
               </p>
 
               {/* Author */}
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-white text-sm font-bold">
-                  {testimonial.avatar}
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-500/30">
+                    <img 
+                      src={testimonial.avatar} 
+                      alt={testimonial.author}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <div className="text-white font-medium">{testimonial.author}</div>
+                    <div className="text-dark-500 text-sm">{testimonial.role}</div>
+                  </div>
                 </div>
-                <div>
-                  <div className="text-white font-medium">{testimonial.author}</div>
-                  <div className="text-dark-500 text-sm">{testimonial.role}</div>
-                </div>
+                {testimonial.companyLogo && (
+                  <div className="w-12 h-12 rounded-lg bg-dark-800 border border-dark-700 flex items-center justify-center">
+                    <span className="text-xs font-bold text-primary-400">{testimonial.companyLogo}</span>
+                  </div>
+                )}
               </div>
             </motion.div>
           ))}
